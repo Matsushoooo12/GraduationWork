@@ -10,7 +10,7 @@ const Home: React.FC = () => {
         justifyContent="center"
         alignItems="center"
         mx="20px"
-        direction={{ base: "column", md: "column", lg: "row" }}
+        direction={{ base: "column", md: "row", lg: "row" }}
       >
         <Box mr="8px">
           <Box w="100px" mb="16px">

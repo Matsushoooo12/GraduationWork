@@ -32,12 +32,11 @@ const Header: React.FC<Props> = ({ children }) => {
     <>
       <Flex>
         <Box
-          w="240px"
           minHeight="100vh"
           maxHeight="100%"
           bg="blue.900"
           boxShadow="md"
-          display={{ base: "none", lg: "block" }}
+          w={isOpen ? "240px" : "0"}
         ></Box>
         <Box flex="1" bg="white">
           <Box
@@ -51,20 +50,10 @@ const Header: React.FC<Props> = ({ children }) => {
             <Flex h="100%" alignItems="center">
               <Icon
                 as={GiHamburgerMenu}
-                display={{ base: "block", md: "block", lg: "none" }}
+                display="block"
                 w={10}
                 h={10}
                 onClick={onOpen}
-                color="blue.900"
-                cursor="pointer"
-                mr="40px"
-              />
-              <Icon
-                as={GiHamburgerMenu}
-                display={{ base: "none", md: "none", lg: "block" }}
-                w={10}
-                h={10}
-                onClick={onClose}
                 color="blue.900"
                 cursor="pointer"
                 mr="40px"
